@@ -54,8 +54,11 @@ public class CharacterController2D : MonoBehaviour
 			if (colliders[i].gameObject != gameObject)
 			{
 				m_Grounded = true;
-				if (!wasGrounded)
+				if (!wasGrounded && m_Rigidbody2D.velocity.y < 0)
+                {
 					OnLandEvent.Invoke();
+                }
+					
 			}
 		}
 	}
@@ -82,6 +85,7 @@ public class CharacterController2D : MonoBehaviour
 			{
 				if (!m_wasCrouching)
 				{
+					
 					m_wasCrouching = true;
 					OnCrouchEvent.Invoke(true);
 				}

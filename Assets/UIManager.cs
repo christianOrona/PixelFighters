@@ -25,7 +25,7 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         points.text = numberOfPoints.ToString();
-        Debug.Log(numberOfPoints.ToString());
+
     }
 
 
