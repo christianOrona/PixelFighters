@@ -4,6 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
+    #region Singleton
+    public static UIManager instance;
+
+    void Awake(){
+        instance = this;
+    }
+    
+    #endregion
+    
     public Text points;
     public float numberOfPoints;
     // Start is called before the first frame update

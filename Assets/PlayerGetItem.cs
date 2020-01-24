@@ -12,14 +12,11 @@ public class PlayerGetItem : MonoBehaviour
 
   void OnTriggerEnter2D(Collider2D collider){
     
-    Debug.Log(collider.gameObject.name);
+    UIManager UIManagerInstance = UIManager.instance;
     if(collider.gameObject.tag == "Item"){
-      manager.setPoints(manager.getPoints()+ 5);
-      
+      UIManagerInstance.setPoints(UIManagerInstance.getPoints()+5); 
       Destroy(collider.gameObject);
     }
-    
-
 
   }
 }
