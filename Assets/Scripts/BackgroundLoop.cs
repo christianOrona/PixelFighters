@@ -22,9 +22,9 @@ public class BackgroundLoop : MonoBehaviour
     void loadChildObjects(GameObject obj)
     {
         float objectWidth = obj.GetComponent<SpriteRenderer>().bounds.size.x - choke;
-        Debug.Log(objectWidth);
+       
         int childsNeeded = (int)Mathf.Ceil(screenBounds.x * 3 / objectWidth);
-        Debug.Log(childsNeeded);
+        
         GameObject clone = Instantiate(obj) as GameObject;
         for (int i = 0; i <= childsNeeded; i++)
         {
