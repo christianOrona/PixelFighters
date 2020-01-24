@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour
     public Text points;
     public float numberOfPoints;
     // Start is called before the first frame update
+
     void Start()
     {
         
@@ -25,7 +26,6 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         points.text = numberOfPoints.ToString();
-        Debug.Log(numberOfPoints.ToString());
     }
 
 
